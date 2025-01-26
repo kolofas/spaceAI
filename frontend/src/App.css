@@ -1,0 +1,5 @@
+/* App.css */
+.navbar {
+  position: relative;
+  z-index: 2; /* Шапка выше контента и частиц */
+}

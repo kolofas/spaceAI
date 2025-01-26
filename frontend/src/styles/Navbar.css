@@ -1,0 +1,32 @@
+/* Navbar.css */
+.navbar {
+  background-color: transparent !important; /* Прозрачный фон */
+  position: fixed; /* Фиксированная позиция */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Шапка выше всего */
+  transition: background-color 0.3s ease; /* Плавное изменение фона */
+}
+
+/* Если нужно, чтобы шапка становилась непрозрачной при прокрутке */
+.navbar.scrolled {
+  background-color: #121212 !important; /* Цвет фона при прокрутке */
+}
+
+.navbar-brand {
+  color: #fff !important; /* Белый цвет текста */
+  font-weight: bold; /* Жирный шрифт */
+  transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important; /* Белый цвет текста */
+  transition: color 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #c0c0c0 !important; /* Оранжевый цвет при наведении */
+  transform: scale(1.1); /* Увеличиваем текст при наведении */
+}
+

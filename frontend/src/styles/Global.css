@@ -1,0 +1,114 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden; /* Убирает прокрутку */
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden; /* Чтобы частицы не выходили за пределы экрана */
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Частицы на заднем фоне */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Контент поверх частиц */
+  color: #fff;
+  text-align: center;
+  padding-top: 15%;
+  /*background: rgba(0, 0, 0, 0.5);*/
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column; /* Элементы располагаются вертикально */
+  align-items: center; /* Центрируем по горизонтали */
+  padding: 20px; /* Отступы вокруг таблицы */
+}
+
+.table-custom {
+  width: 80%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
+  backdrop-filter: blur(0px); /* Размытие фона */
+  border-radius: 10px; /* Закруглённые углы */
+  overflow: hidden;
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.2), /* Основная тень */
+    0 0 20px rgba(255, 255, 255, 0.1) inset; /* Внутренний блик */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Тонкая граница */
+  position: relative;
+}
+
+/* Эффект зеркальной поверхности */
+.table-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.05)
+  ); /* Градиент для зеркального эффекта */
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.table-custom th,
+.table-custom td {
+  padding: 12px 15px;
+  text-align: left;
+  color: #e0e0e0; /* Серебристый цвет текста */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Граница между строками */
+}
+
+.table-custom th {
+  background-color: rgba(255, 255, 255, 0.15); /* Полупрозрачный фон для заголовков */
+  font-weight: bold;
+  color: #ffffff; /* Белый цвет текста для заголовков */
+  text-transform: uppercase; /* Заглавные буквы для заголовков */
+  letter-spacing: 1px; /* Увеличиваем расстояние между буквами */
+}
+
+.table-custom tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02); /* Увеличение при наведении */
+  transition: all 0.3s ease; /* Плавный переход */
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e0e0e0; /* Серебристый цвет */
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Заглавные буквы */
+  letter-spacing: 1px; /* Увеличиваем расстояние между буквами */
+}
+
+.categories-title {
+  text-align: center; /* Центрируем текст */
+  color: #e0e0e0; /* Серебристый цвет */
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Отступ снизу */
+  text-transform: uppercase; /* Заглавные буквы */
+  letter-spacing: 1px; /* Увеличиваем расстояние между буквами */
+}

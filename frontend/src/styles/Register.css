@@ -1,0 +1,65 @@
+/* Register.css */
+.register-container {
+  display: flex;
+  justify-content: center; /* Центрируем по горизонтали */
+  align-items: center; /* Центрируем по вертикали */
+  /*width: 100%; !* Растягиваем на всю ширину экрана *!*/
+  /*padding: 20px; !* Отступы по краям *!*/
+  /*box-sizing: border-box; !* Учитываем padding в ширине *!*/
+}
+
+.register-card {
+  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
+  backdrop-filter: blur(0px); /* Размытие фона */
+  border-radius: 10px; /* Закруглённые углы */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Тонкая граница */
+  padding: 25px;
+  width: 100%; /* Занимает всю ширину контейнера */
+  max-width: 400px; /* Ограничиваем ширину карточки */
+  margin: 0 auto; /* Центрируем карточку */
+
+}
+
+.register-card h2 {
+  text-align: center;
+  color: #e0e0e0; /* Серебристый цвет текста */
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Заглавные буквы */
+  letter-spacing: 1px; /* Увеличиваем расстояние между буквами */
+}
+
+.register-card .form-label {
+  color: #e0e0e0; /* Серебристый цвет текста */
+}
+
+.register-card .form-control {
+  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон для полей ввода */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Тонкая граница */
+  color: #e0e0e0; /* Серебристый цвет текста */
+  border-radius: 5px;
+}
+
+.register-card .form-control:focus {
+  background: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон при фокусе */
+  border-color: rgba(255, 255, 255, 0.4); /* Граница при фокусе */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); /* Тень при фокусе */
+}
+
+.register-card .btn-primary {
+  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон для кнопки */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Тонкая граница */
+  color: #e0e0e0; /* Серебристый цвет текста */
+  transition: all 0.3s ease; /* Плавный переход */
+}
+
+.register-card .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон при наведении */
+  border-color: rgba(255, 255, 255, 0.4); /* Граница при наведении */
+  transform: scale(1.05); /* Увеличение при наведении */
+}
+
+.register-card .text-danger {
+  color: #ff6b6b; /* Красный цвет для ошибок */
+  text-align: center;
+}
